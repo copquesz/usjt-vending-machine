@@ -1,5 +1,7 @@
 # CandyMachine
 
+Front-end do Projeto #1 de Ciência da Computação - Teoria da Computação e Compiladores, onde é exibido uma Vending Machine desenvolvida em Typescript em poder do elemento Canvas e suas funcionalidades.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
 ## Development server
