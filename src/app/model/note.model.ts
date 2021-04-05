@@ -1,12 +1,12 @@
-export class Nota {
+export class Note {
 
-  public id: number;
-  public x: number;
-  public y: number;
-  public w: number;
-  public h: number;
-  public value: number;
-  public image: HTMLImageElement;
+  id: number;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  value: number;
+  image: HTMLImageElement;
 
   constructor(x?: number, y?: number, w?: number, h?: number, value?: number, src?: string) {
     this.x = x;
@@ -19,6 +19,9 @@ export class Nota {
   }
 
   draw(context: CanvasRenderingContext2D) {
-    this.image.onload = () => context.drawImage(this.image, this.x, this.y, this.w, this.h);
+    this.image.onload = () => {
+      context.drawImage(this.image, this.x, this.y, this.w, this.h);
+      context.strokeRect(this.x, this.y, this.w, this.h);
+    }
   }
 }

@@ -1,17 +1,62 @@
 
 <div class="container min-vh-100 d-flex justify-content-center align-items-center">
   <div class="row">
-    <div class="col-12">
+    <div class="col-lg-12">
       <div class="header">
         <h1 class="text-center mb-2">Candy Machine</h1>
         <div class="row">
-          <div class="col-8 mx-auto">
-            <p class="text-center text-muted font-weight-light my-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices, nunc id varius pretium, ipsum lacus vehicula leo, ut interdum risus libero eu massa. Cras in dignissim lectus. Etiam pharetra odio sed purus ullamcorper lacinia. Morbi congue erat lectus, non aliquet odio rutrum nec. </p>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-center text-muted font-weight-light my-3">Front-end do <span class="text-bold">Projeto #1</span> de Ciência da Computação - Teoria da Computação e Compiladores, onde é exibido uma Vending Machine desenvolvida em Typescript em poder do elemento Canvas e suas funcionalidades.</p>
           </div>
         </div>
         <div class="row mt-5">
-          <div class="col-12 d-flex justify-content-center">
+          <div class="col-lg-9 d-flex justify-content-center">
             <canvas #canvas></canvas>
+          </div>
+          <div class="col-lg-3">
+            <div class="row mt-5">
+              <div class="col-lg-12">
+                <div class="alert alert-info" role="alert">
+                  <h4 class="alert-heading text-center">Painel Info:</h4>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Chave:</th>
+                        <th scope="col">Valor</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Status:</th>
+                        <td>{{ this.stage }}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Inserido:</th>
+                        <td>R$ {{ this.totalInsert }},00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Solicitado:</th>
+                        <td>R$ {{ this.totalRequest }},00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Troco:</th>
+                        <td>R$ {{ this.transshipment }},00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-lg-12">
+                <div class="alert alert-warning" role="alert">
+                  <h4 class="alert-heading text-center">Item Selecionados:</h4>
+                  <hr>
+                  <span class="badge badge-danger mr-2 my-1 py-2" *ngIf="this.itemSelected">#{{this.itemSelected}}</span>
+                  <span *ngIf="!this.itemSelected">Nenhum item selecionado ...</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
